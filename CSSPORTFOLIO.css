@@ -1,0 +1,169 @@
+/* Ensure everything fits within the screen dynamically */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Protection: Disable text selection & image dragging */
+body, html, .background-image, .main-content, .why-work-with-me-content, img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+/* Background styling */
+.background-image {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('IMAGESPORTFOLIO/background4.jpg') no-repeat center center/cover;
+    filter: blur(2px); 
+    z-index: -1; 
+}
+/* Header section */
+.header {
+    display: flex; 
+    font-family: Tahoma, sans-serif;  
+    justify-content: space-between; 
+    align-items: center;
+    color: whitesmoke;
+    width: 100%;
+}
+.header span,
+.header .name,
+.header .position {
+    display: inline-block;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+.header span:hover,
+.header .name:hover,
+.header .position:hover {
+    transform: scaleX(1.2);
+    letter-spacing: 2px;
+}
+.header-left {      
+    display: flex;
+    flex-direction: column;    
+    font-weight: bold;
+    align-items: left; 
+    margin-left: 100px; 
+}
+.name {
+    margin-top: 10px;
+    font-size: 30px;
+}
+.position {
+    font-size: 15px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    align-content: right;
+    gap: 50px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+.header-right span.default-active {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}
+.home:hover, .about:hover, .skills:hover, .project:hover, .contact:hover {
+    text-decoration: underline;
+    text-decoration-color: red; 
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}
+
+/* Main content */
+.desired-position {
+    text-align: left;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-family: Tahoma, sans-serif;
+    font-size: 50px;
+    color: whitesmoke;
+}
+.about-desired-position {
+    text-align: justify;
+    margin-top: 50px;
+    margin-left: 100px; 
+    margin-right: 100px;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+/* Buttons */
+.why-work-with-me {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 100px; 
+    font-size: 30px;
+    font-family: Tahoma, sans-serif;
+    background-color: rgb(155, 18, 18);
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+.why-work-with-me:hover {
+    cursor: pointer;
+    background-color: rgb(212, 58, 58);
+    color: rgb(75, 74, 74);
+    opacity: 1;
+    animation: wobble 0.5s ease-in-out;
+}
+@keyframes wobble {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(-5px); }
+  30%  { transform: translateX(4px); }
+  45%  { transform: translateX(-3px); }
+  60%  { transform: translateX(2px); }
+  75%  { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+.why-work-with-me-content {
+    display: none;
+    flex-direction: column;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 600px;
+    transition: opacity 0.5s ease-in-out;
+}
+.contact-me {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 30px; 
+    font-size: 30px;
+    font-family: Tahoma, sans-serif;
+    background-color: gray;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.contact-me:hover {
+    cursor: pointer;
+    background-color: rgb(75, 74, 74);
+    color: rgb(155, 18, 18);
+    opacity: 1;
+    transition: opacity 0.3s ease; 
+    animation: wobble 0.5s ease-in-out;
+}

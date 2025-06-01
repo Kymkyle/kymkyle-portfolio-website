@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work Portfolio</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noimageindex, noarchive, nosnippet">
+    <link rel="stylesheet" type="text/css" href="CSSPORTFOLIO.css">
+</head>
+<body oncontextmenu="return false;">
+    <div class="main-content">   
+        <div class="background-image">
+            <!-- <img src="IMAGESPORTFOLIO/background3.jpg" alt="background">  -->
+        </div>
+        <h1>
+            <div class="header">
+                <div class="header-left">
+                    <div class="name">Karen Young</div>
+                    <div class="position">FRONT-END DEVELOPER</div>
+                </div>
+                
+                <div class="header-right">
+                    <span class="home">HOME</span>
+                    <span class="about" onclick="window.location.href='aboutme.html'">ABOUT ME</span>
+                    <span class="skills" onclick="window.location.href='skills.html'">SKILLS</span>
+                    <span class="project" onclick="window.location.href='project.html'">PROJECT</span>
+                    <span class="contact" onclick="window.location.href='contact.html'">CONTACT</span>
+                </div>
+            </div>
+        </h1>
+        <div class="desired-position">Front-end Developer.</div>
+        <div>
+            <p class="about-desired-position">I’m a Front-End Developer with a passion for creating responsive, 
+                user-friendly web applications. I specialize in HTML, CSS, JavaScript, and modern front-end frameworks 
+                to build clean, interactive, and visually appealing websites. With a keen eye for detail and a love for 
+                problem-solving, I strive to create seamless digital experiences.
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="why-work-with-me" onclick="toggleContent()">Why work with me?</button>
+            <button class="contact-me" onclick="toggleContent1()">Interested in Collaborating? Click Here</button>
+            <div class="why-work-with-me-content">
+                <!-- <p>With a background in graphic design and a passion for coding, I bring a unique blend of creativity and 
+                technical expertise to web development. I specialize in crafting responsive, user-friendly, and visually 
+                engaging websites that not only look great but function seamlessly. A quick learner and a team player, I 
+                thrive on new challenges and am dedicated to delivering high-quality work that meets and exceeds 
+                expectations.
+                </p> -->
+                <div>✔ Passionate about writing clean, efficient, and maintainable code.</div>
+                <div>✔ Always eager to learn and master new technologies.</div>
+                <div>✔ Strong focus on responsive & user-friendly design.</div>
+                <div>✔ Open to collaborations & freelance opportunities.</div>
+                <div>💡 Let’s create something amazing together! 🚀</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent() {
+            const content = document.querySelector(".why-work-with-me-content");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "flex";
+                setTimeout(() => {
+                    content.style.opacity = 1;
+                }, 10);
+            } else {
+                content.style.opacity = 0;
+                setTimeout(() => {
+                    content.style.display = "none";
+                }, 500);
+            }
+        }
+
+        function toggleContent1() {
+            window.location.href = 'contact.html';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll(".header-right span");
+            const homeItem = menuItems[0];
+            homeItem.classList.add("default-active");
+
+            menuItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    menuItems.forEach(i => i.classList.remove("active", "default-active"));
+                    this.classList.add("active");
+                });
+            });
+
+            // Disable image dragging
+            document.querySelectorAll('img').forEach(img => {
+                img.setAttribute('draggable', 'false');
+            });
+        });
+
+        // Block dev tools and view-source shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') || // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase()))
+            ) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

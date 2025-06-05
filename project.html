@@ -4,102 +4,110 @@
     <title>Work Portfolio - Projects</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noimageindex, noarchive, nosnippet">
-    <link rel="stylesheet" type="text/css" href="project.css">
+    <!-- Preload CSS -->
+    <link rel="preload" href="project.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="project.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body oncontextmenu="return false;">
-    <div class="background-image"></div>
-    <h1>
-        <div class="header">
-            <div class="header-left">
-                <div class="name">Karen Young</div>
-                <div class="position">FRONT-END DEVELOPER</div>
-            </div>
-            <div class="header-right">
-                <span class="home" onclick="window.location.href='index.html'">HOME</span>
-                <span class="about" onclick="window.location.href='aboutme.html'">ABOUT ME</span>
-                <span class="skills" onclick="window.location.href='skills.html'">SKILLS</span>
-                <span class="project">PROJECT</span>
-                <span class="contact" onclick="window.location.href='contact.html'">CONTACT</span>
-            </div>
-        </div>
-    </h1>
-    <div class="project-container">    
-        <div class="projects">PROJECTS</div>
-    </div>
-    <div class="project-body">
-        <div class="project-left">
-            <div class="project-details"> WEBSITE CLONE SAMPLE
-                <a class="project-name" href="../WIKIPEDIA/wikipedia.html" target="_blank">
-                    1. Wikipedia Sample
-                </a>
-                <a class="project-name" href="../PRACTICE TEST/googlepagesample.html" target="_blank">
-                    2. Google Sample
-                </a>
-                <a class="project-name" href="../JAVASCRIPT EXERCISES/LOGINPAGE/loginpage.html" target="_blank">
-                    3. Log In Page Sample
-                </a>
-                <a class="project-name" href="../BOOTSTRAP/bootstrap clone/bootstrapcheckoutform.html" target="_blank">
-                    4. BootStrap Clone Sample
-                </a>
-                <a class="project-name" href="../../EXERCISES-AMAZON-14/javascript-amazon-project-main/amazon.html" target="_blank">
-                    5. Amazon Clone Sample
-                </a>
-            </div>
-        </div>
+    <!-- PRELOADER (NEW) -->
+    <div id="preloader">Loading...</div>
 
-        <div class="project-middle">
-            <div class="project-details">CREATED WEBSITE SAMPLES
-                <a class="project-name" href="../REALESTATEPORTFOLIO/realtorwebsite.html" target="_blank">
-                    1. Real Estate Property Website
-                </a>
-                <a class="project-name" href="../VAPORTFOLIO/kyoungvaportfolio.html" target="_blank">
-                    2. Virtual Assistant Portfolio Website
-                </a>
-            </div>  
-            <div class="project-details">APPLICATION PROGRAMS CLONE SAMPLE
-                <a class="project-name" href="../APPLICATIONPROGRAMS/ROCKPAPERSCISSORS/12-rock-paper-scissors.html" target="_blank">
-                    1. Rock, Paper and Scissors Challenge
-                </a>
-                <a class="project-name" href="../APPLICATIONPROGRAMS/CALCULATOR/10-calculator.html" target="_blank">
-                    2. Calculator 
-                </a>
-                <a class="project-name" href="../APPLICATIONPROGRAMS/COINFLIP/06-coin-flip-game.html" target="_blank">
-                    3. Coin Flip Challenge
-                </a>
-            </div>         
-        </div>
-
-        <div class="project-right">
-            <div class="project-details">SAMPLE FORMS
-                <a class="project-name" href="../FORMS/exampleadvancedform.html" target="_blank">
-                    1. Contact Form
-                </a>
-                <a class="project-name" href="../FORMS/jobapplicationform.html" target="_blank">
-                    2. Job Application Form
-                </a>
-                <a class="project-name" href="../FORMS/event-registration-form.html" target="_blank">
-                    3. Event Registration Form
-                </a>
-                <a class="project-name" href="../FORMS/booking-appointment-form.html" target="_blank">
-                    4. Booking Appointment Form
-                </a>
+    <div class="main-content1">    
+        <div class="background-image"></div>
+        <h1>
+            <div class="header">
+                <div class="header-left">
+                    <div class="name">Karen Young</div>
+                    <div class="position">FRONT-END DEVELOPER</div>
+                </div>
+                <div class="header-right">
+                    <span class="home" onclick="window.location.href='index.html'">HOME</span>
+                    <span class="about" onclick="window.location.href='aboutme.html'">ABOUT ME</span>
+                    <span class="skills" onclick="window.location.href='skills.html'">SKILLS</span>
+                    <span class="project">PROJECT</span>
+                    <span class="contact" onclick="window.location.href='contact.html'">CONTACT</span>
+                </div>
             </div>
+        </h1>
+        <div class="project-container">    
+            <div class="projects">PROJECTS</div>
         </div>
-    </div>
-    <div class="projects-content">
-        <div class="projects-text">
-           
-        </div>
-        <div class="projects-text">
-            
-        </div>
-    </div>
+        <div class="project-body">
+            <div class="project-left">
+                <div class="project-details"> WEBSITE CLONE SAMPLE
+                    <a class="project-name" href="../WIKIPEDIA/wikipedia.html" target="_blank">
+                        1. Wikipedia Sample
+                    </a>
+                    <a class="project-name" href="../PRACTICE TEST/googlepagesample.html" target="_blank">
+                        2. Google Sample
+                    </a>
+                    <a class="project-name" href="../JAVASCRIPT EXERCISES/LOGINPAGE/loginpage.html" target="_blank">
+                        3. Log In Page Sample
+                    </a>
+                    <a class="project-name" href="../BOOTSTRAP/bootstrap clone/bootstrapcheckoutform.html" target="_blank">
+                        4. BootStrap Clone Sample
+                    </a>
+                    <a class="project-name" href="../../EXERCISES-AMAZON-14/javascript-amazon-project-main/amazon.html" target="_blank">
+                        5. Amazon Clone Sample
+                    </a>
+                </div>
+            </div>
     
-    <div class="buttons">
-        <!-- <button class="resume" onclick="toggleContent()">Resume</button> -->
-        <button class="contact-me" onclick="toggleContent1()">Interested in Collaborating? Click Here</button>
+            <div class="project-middle">
+                <div class="project-details">CREATED WEBSITE SAMPLES
+                    <a class="project-name" href="../REALESTATEPORTFOLIO/realtorwebsite.html" target="_blank">
+                        1. Real Estate Property Website
+                    </a>
+                    <a class="project-name" href="../VAPORTFOLIO/kyoungvaportfolio.html" target="_blank">
+                        2. Virtual Assistant Portfolio Website
+                    </a>
+                </div>  
+                <div class="project-details">APPLICATION PROGRAMS CLONE SAMPLE
+                    <a class="project-name" href="../APPLICATIONPROGRAMS/ROCKPAPERSCISSORS/12-rock-paper-scissors.html" target="_blank">
+                        1. Rock, Paper and Scissors Challenge
+                    </a>
+                    <a class="project-name" href="../APPLICATIONPROGRAMS/CALCULATOR/10-calculator.html" target="_blank">
+                        2. Calculator 
+                    </a>
+                    <a class="project-name" href="../APPLICATIONPROGRAMS/COINFLIP/06-coin-flip-game.html" target="_blank">
+                        3. Coin Flip Challenge
+                    </a>
+                </div>         
+            </div>
+    
+            <div class="project-right">
+                <div class="project-details">SAMPLE FORMS
+                    <a class="project-name" href="../FORMS/exampleadvancedform.html" target="_blank">
+                        1. Contact Form
+                    </a>
+                    <a class="project-name" href="../FORMS/jobapplicationform.html" target="_blank">
+                        2. Job Application Form
+                    </a>
+                    <a class="project-name" href="../FORMS/event-registration-form.html" target="_blank">
+                        3. Event Registration Form
+                    </a>
+                    <a class="project-name" href="../FORMS/booking-appointment-form.html" target="_blank">
+                        4. Booking Appointment Form
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="projects-content">
+            <div class="projects-text">
+               
+            </div>
+            <div class="projects-text">
+                
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <!-- <button class="resume" onclick="toggleContent()">Resume</button> -->
+            <button class="contact-me" onclick="toggleContent1()">Interested in Collaborating? Click Here</button>
+        </div>
     </div>
-        <script>
+    <script>
         function toggleContent1() {
             window.location.href = 'contact.html';
         }
@@ -132,6 +140,20 @@
         //         e.preventDefault();
         //     }
         // });
+        // NEW: Preloader fade out and show content after everything loads
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.querySelector(".main-content1");
+
+            // Fade out preloader
+            preloader.classList.add("fade-out");
+
+            // After fade out, hide preloader and show main content
+            setTimeout(() => {
+                preloader.style.display = "none";
+                mainContent.style.visibility = "visible";
+            }, 500);
+        });
     </script>
 </body>
 </html>

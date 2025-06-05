@@ -68,6 +68,18 @@
         </div>
     </div>
     <script>
+        // Preloader fade out and reveal main content on page load
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.querySelector(".main-content1");
+
+            preloader.classList.add("fade-out");
+
+            setTimeout(() => {
+                preloader.style.display = "none";
+                mainContent.style.visibility = "visible";
+            }, 3000);
+        });
         document.addEventListener("DOMContentLoaded", function () {
             const menuItems = document.querySelectorAll(".header-right span");
             const aboutItem = menuItems[1]; 
@@ -103,18 +115,7 @@
                 e.preventDefault();
             }
         });
-        // Preloader fade out and reveal main content on page load
-        window.addEventListener("load", function () {
-            const preloader = document.getElementById("preloader");
-            const mainContent = document.querySelector(".main-content1");
-
-            preloader.classList.add("fade-out");
-
-            setTimeout(() => {
-                preloader.style.display = "none";
-                mainContent.style.visibility = "visible";
-            }, 10000);
-        });
+        
     </script>
 </body>
 </html>

@@ -4,9 +4,14 @@
     <title>Work Portfolio</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noimageindex, noarchive, nosnippet">
-    <link rel="stylesheet" type="text/css" href="CSSPORTFOLIO.css">
+    <link rel="stylesheet" type="text/css" href="CSSPORTFOLIO.css"><!-- Preload CSS to speed up style loading -->
+    <link rel="preload" href="CSSPORTFOLIO.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="CSSPORTFOLIO.css"></noscript>
+
 </head>
 <body oncontextmenu="return false;">
+    <!-- PRELOADER (NEW) -->
+    <div id="preloader">Loading...</div>
     <div class="main-content">   
         <div class="background-image">
             <!-- <img src="IMAGESPORTFOLIO/background3.jpg" alt="background">  -->
@@ -100,6 +105,20 @@
             ) {
                 e.preventDefault();
             }
+        });
+        // NEW: Preloader fade out and show content after everything loads
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const mainContent = document.querySelector(".main-content");
+
+            // Fade out preloader
+            preloader.classList.add("fade-out");
+
+            // After fade out, hide preloader and show main content
+            setTimeout(() => {
+                preloader.style.display = "none";
+                mainContent.style.visibility = "visible";
+            }, 500);
         });
     </script>
 </body>

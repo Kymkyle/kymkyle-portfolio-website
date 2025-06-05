@@ -124,74 +124,79 @@
         
             
     </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("p2Upqh7XEc0ILtjza"); // Your user ID here
+
             const menuItems = document.querySelectorAll(".header-right span");
-            const aboutItem = menuItems[4]; 
-            aboutItem.classList.add("default-active");
+            const aboutItem = menuItems[4];
+            if (aboutItem) aboutItem.classList.add("default-active");
+
             menuItems.forEach(item => {
-                item.addEventListener("click", function () {
-                    // Remove 'active' and 'default-active' from all items
-                    menuItems.forEach(i => i.classList.remove("active", "default-active"));
-
-                    // Add 'active' class to the clicked item
-                    this.classList.add("active");
-                });
+            item.addEventListener("click", function () {
+                menuItems.forEach(i => i.classList.remove("active", "default-active"));
+                this.classList.add("active");
             });
-        });
-        const popupOverlay = document.querySelector(".popup-overlay");
-        const getInTouchBtn = document.querySelector(".get-in-touch");
-        const closeBtn = document.querySelector(".close-btn");
+            });
 
-        // Show popup when button is clicked
-        getInTouchBtn.addEventListener("click", () => {
+            const popupOverlay = document.querySelector(".popup-overlay");
+            const getInTouchBtn = document.querySelector(".get-in-touch");
+            const closeBtn = document.querySelector(".close-btn");
+
+            getInTouchBtn.addEventListener("click", () => {
             popupOverlay.style.display = "flex";
-        });
+            });
 
-        // Hide popup when close button is clicked
-        closeBtn.addEventListener("click", () => {
+            closeBtn.addEventListener("click", () => {
             popupOverlay.style.display = "none";
-        });
+            });
 
-        // Hide popup when clicking outside the form
-        popupOverlay.addEventListener("click", (event) => {
+            popupOverlay.addEventListener("click", (event) => {
             if (event.target === popupOverlay) {
                 popupOverlay.style.display = "none";
             }
-        });
-        
-        // Disable right-click context menu
-        document.addEventListener('contextmenu', e => e.preventDefault());
+            });
 
-        // Disable text selection and copying
-        document.addEventListener('selectstart', e => e.preventDefault());
-        document.addEventListener('copy', e => e.preventDefault());
-
-        // Disable dragging elements (like images)
-        document.addEventListener('dragstart', e => e.preventDefault());
-
-        // Optional: Disable keyboard shortcuts like Ctrl+C, Ctrl+S, Ctrl+U
-        document.addEventListener('keydown', e => {
-            if (
-            (e.ctrlKey && ['c', 's', 'u', 'a', 'p'].includes(e.key.toLowerCase())) ||
-            e.key === 'PrintScreen'
-            ) {
-            e.preventDefault();
+            // Disable right-click, text selection, copying, dragging, and certain keyboard shortcuts
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('selectstart', e => e.preventDefault());
+            document.addEventListener('copy', e => e.preventDefault());
+            document.addEventListener('dragstart', e => e.preventDefault());
+            document.addEventListener('keydown', e => {
+            if ((e.ctrlKey && ['c', 's', 'u', 'a', 'p'].includes(e.key.toLowerCase())) || e.key === 'PrintScreen') {
+                e.preventDefault();
             }
-        });
-        
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent actual form submission
-            // You can add AJAX call here if needed
-            document.getElementById("thankyou-popup").style.display = "flex";
-            this.reset(); // Clear form fields
+            });
+
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const submitButton = form.querySelector("button[type='submit']");
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+
+            emailjs.sendForm('service_dnbnkok', 'template_1b35qre', this)
+                .then(function() {
+                document.getElementById("thankyou-popup").style.display = "flex";
+                form.reset();
+                })
+                .catch(function(error) {
+                console.error("EmailJS error:", error);
+                })
+                .finally(function() {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Send Message";
+                });
+            });
         });
 
         function closePopup() {
             document.getElementById("thankyou-popup").style.display = "none";
+            window.location.href = "contact.html";
         }
-
-
     </script>
 </body>
 </html>

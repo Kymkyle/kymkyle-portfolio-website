@@ -581,6 +581,10 @@ a:hover .bi.bi-skype {
     .contact-body {
         padding: 0px;
     }
+    .contact-details-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 .popup-overlay1 {
     position: fixed;

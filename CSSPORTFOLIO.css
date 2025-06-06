@@ -188,3 +188,116 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
     transition: opacity 0.3s ease; 
     animation: wobble 0.5s ease-in-out;
 }
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* Small laptop / netbook */
+@media (max-width: 1199px) {
+    .header-left {
+        margin-left: 50px;
+    }
+    .header-right {
+        margin-right: 50px;
+        gap: 30px;
+        font-size: 18px;
+    }
+    .desired-position {
+        margin-left: 50px;
+        font-size: 40px;
+    }
+    .about-desired-position {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 18px;
+    }
+    .why-work-with-me {
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .why-work-with-me-content {
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .header-left {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .header-right {
+        margin: 0 20px;
+        gap: 20px;
+        font-size: 16px;
+    }
+    .desired-position {
+        margin-left: 20px;
+        font-size: 35px;
+        margin-top: 100px;
+    }
+    .about-desired-position {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    .why-work-with-me {
+        margin-left: 20px;
+        font-size: 22px;
+    }
+    .why-work-with-me-content {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+    .contact-me {
+        margin-left: 20px;
+        font-size: 22px;
+    }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .header-left {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .header-right {
+        margin: 0 10px;
+        gap: 15px;
+        font-size: 14px;
+    }
+    .desired-position {
+        margin-left: 10px;
+        font-size: 28px;
+        margin-top: 80px;
+    }
+    .about-desired-position {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .why-work-with-me {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .why-work-with-me-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    .contact-me {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}

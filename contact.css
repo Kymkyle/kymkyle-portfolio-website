@@ -570,6 +570,7 @@ a:hover .bi.bi-skype {
     .body-left-side {
         width: 100%;
         margin: 0;
+        padding-left: 0px; 
     }
     .body-right-side {
         width: 100%;

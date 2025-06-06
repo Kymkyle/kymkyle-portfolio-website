@@ -128,7 +128,12 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
     align-items: center;
 }
 .main-content1 {
-    visibility: hidden;
+    opacity: 0;
+    visibility: visible; /* not hidden — we will animate opacity instead */
+    transition: opacity 0.8s ease-out;
+}
+.main-content1.show {
+    opacity: 1;
 }
 .main-content {
     padding-top: 20px;

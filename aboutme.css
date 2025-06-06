@@ -1,4 +1,5 @@
 .main-content1 {
+    min-height: 100vh; /* Fill at least full screen */
     opacity: 0;
     visibility: visible; /* not hidden — we will animate opacity instead */
     transition: opacity 0.8s ease-out;

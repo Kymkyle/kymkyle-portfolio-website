@@ -77,8 +77,9 @@
 
             setTimeout(() => {
                 preloader.style.display = "none";
-                mainContent.style.visibility = "visible";
-            }, 1000);
+                mainContent.classList.add("show");
+            }, 800); // match preloader transition
+
         });
         document.addEventListener("DOMContentLoaded", function () {
             const menuItems = document.querySelectorAll(".header-right span");

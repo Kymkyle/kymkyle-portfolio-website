@@ -1,7 +1,4 @@
-/* Initially hide main-content1 */
-.main-content1 {
-    visibility: hidden;
-}
+
 /* Preloader styles */
 #preloader {
     position: fixed;

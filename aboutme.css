@@ -1,13 +1,3 @@
-.main-content1 {
-    position: relative;
-    min-height: 100vh; /* Fill at least full screen */
-    opacity: 0;
-    visibility: visible; /* not hidden — we will animate opacity instead */
-    transition: opacity 0.8s ease-out;
-}
-.main-content1.show {
-    opacity: 1;
-}
 /* Preloader styles */
 #preloader {
     position: fixed;
@@ -58,8 +48,6 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
     background: url('IMAGESPORTFOLIO/background10.jpg') no-repeat center center/cover;
     filter: blur(4px); 
     z-index: -1; 
-    opacity: 0;
-    animation: fadeInBackground 1.5s ease forwards;
 }
 /* Header */
 .header {

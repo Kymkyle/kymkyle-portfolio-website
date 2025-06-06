@@ -1,3 +1,11 @@
+.main-content1 {
+    opacity: 0;
+    visibility: visible; /* not hidden — we will animate opacity instead */
+    transition: opacity 0.8s ease-out;
+}
+.main-content1.show {
+    opacity: 1;
+}
 /* Preloader styles */
 #preloader {
     position: fixed;
@@ -127,14 +135,7 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
     justify-content: center;
     align-items: center;
 }
-/* .main-content1 {
-    opacity: 0;
-    visibility: visible; /* not hidden — we will animate opacity instead */
-    transition: opacity 0.8s ease-out;
-}
-.main-content1.show {
-    opacity: 1;
-} */
+
 .main-content {
     padding-top: 20px;
     padding-bottom: 20px;

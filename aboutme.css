@@ -36,7 +36,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    background: url('IMAGESPORTFOLIO/background10.jpg') no-repeat center center/cover;
+    background-color: #111; /* Keep this fallback background */
 }
 /* Protection: Disable text selection & image dragging */
 body, html, .background-image, .main-content, .why-work-with-me-content, img {

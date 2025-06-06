@@ -36,7 +36,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    background-color: #111;
+    background: url('IMAGESPORTFOLIO/background10.jpg') no-repeat center center/cover;
 }
 /* Protection: Disable text selection & image dragging */
 body, html, .background-image, .main-content, .why-work-with-me-content, img {
@@ -56,7 +56,7 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
     height: 100vh;
     background: url('IMAGESPORTFOLIO/background10.jpg') no-repeat center center/cover;
     filter: blur(4px); 
-    z-index: 1; 
+    z-index: -1; 
 }
 /* Header */
 .header {

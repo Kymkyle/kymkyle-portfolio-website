@@ -19,6 +19,18 @@
     opacity: 0;
     pointer-events: none;
 }
+/* General styles */
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: #111; /* Keep this fallback background */
+    z-index: -2;
+}
 /* Blur background */
 .blur {
     filter: blur(3px); /* Adjust blur intensity */

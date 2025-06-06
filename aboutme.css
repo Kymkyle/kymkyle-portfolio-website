@@ -27,7 +27,6 @@
     opacity: 0;
     pointer-events: none;
 }
-html, body { background-color: #111; margin: 0; padding: 0; }
 /* General styles */
 html, body {
     width: 100%;
@@ -36,6 +35,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: #111;
 }
 /* Protection: Disable text selection & image dragging */
 body, html, .background-image, .main-content, .why-work-with-me-content, img {

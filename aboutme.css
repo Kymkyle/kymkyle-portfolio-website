@@ -261,3 +261,118 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
   75%  { transform: translateX(-1px); }
   100% { transform: translateX(0); }
 }
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    #preloader {
+        font-size: 28px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        margin: 0;
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .about-me {
+        font-size: 35px;
+    }
+
+    .main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+    }
+
+    .about-me-content,
+    .about-me-content1,
+    .about-me-content2 {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 16px;
+    }
+
+    .sample-projects,
+    .contact-me {
+        font-size: 20px;
+        width: auto;
+        max-width: none;
+        margin-left: 10px;
+    }
+}
+
+/* Small Phone (max-width: 400px) */
+@media (max-width: 400px) {
+    #preloader {
+        font-size: 22px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        margin: 0;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .about-me {
+        font-size: 28px;
+    }
+
+    .main-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .about-me-content,
+    .about-me-content1,
+    .about-me-content2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    .sample-projects,
+    .contact-me {
+        font-size: 18px;
+        width: auto;
+        max-width: none;
+        margin-left: 8px;
+    }
+}

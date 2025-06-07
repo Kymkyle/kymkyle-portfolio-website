@@ -491,9 +491,9 @@ a:hover .bi.bi-skype {
     }
 
     .header-right {
-        font-size: 15px;
-        gap: 10px;
-        margin-right: 10px;
+        margin: 0;
+        gap: 15px;
+        font-size: 14px;
     }
 
     /* Fix "Get in Touch" button */

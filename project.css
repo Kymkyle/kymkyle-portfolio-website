@@ -369,7 +369,7 @@ body, html, .background-image, .main-content, .why-work-with-me-content, img {
         margin-bottom: 10px;
     }
     .header-right {
-        margin: 0 10px;
+        margin: 0;
         gap: 15px;
         font-size: 14px;
     }

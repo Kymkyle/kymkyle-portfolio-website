@@ -371,294 +371,131 @@ a:hover .bi.bi-skype {
 }
 /* Keep your original CSS here */
 
-/* Responsive Fixes for Small Screens */
+/* Small laptop / netbook */
+@media (max-width: 1199px) {
+    .header-left {
+        margin-left: 50px;
+    }
+    .header-right {
+        margin-right: 50px;
+        gap: 30px;
+        font-size: 18px;
+    }
+    .projects {
+        font-size: 40px;
+    }
+    .project-body {
+        gap: 30px;
+        padding: 15px;
+    }
+    .project-details {
+        font-size: 25px;
+    }
+    .project-name {
+        font-size: 18px;
+    }
+}
+
+/* Tablet (768px and below) */
 @media (max-width: 768px) {
-    /* Adjust header */
     .header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        padding: 20px;
     }
-
     .header-left {
-        margin-left: 10px; /* Reduce left margin */
+        margin-left: 20px;
         margin-bottom: 10px;
     }
-
     .header-right {
-        font-size: 15px;
-        gap: 10px;
-        margin-right: 10px;
-    }
-
-    /* Fix "Get in Touch" button */
-    .get-in-touch {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 20px;
-        width: 150px; /* Adjust width to fit exactly two lines */
-        text-align: center; /* Center align text */
-        padding: 10px;
-        line-height: 1.2; /* Control line height to prevent extra wrapping */
-    }
-
-    /* Contact details container */
-    .contact-details-container {
-        flex-direction: column;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 15px;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .contact-details-header {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .contact-details-text,
-    .contact-details-text-content1 {
-        font-size: 15px;
-        margin: 20px;
-        text-align: justify;
-    }
-    .contact-details-text1 {
-        font-size: 15px;
-        justify-content: left;
-        margin-left: 20px;
-    }
-
-    /* Adjust popup */
-    .popup {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .popup h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .popup input,
-    .popup textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-    .close-button {
-        font-size: 14px;
-    }
-
-    .submit-button {
-        font-size: 14px;
-        padding: 10px;
-        width: 100%;
-    }
-
-    /* Fix body layout */
-    .body {
-        flex-direction: column;
-    }
-
-    .body-left-side {
-        width: 100%;
-        margin: 0;
-    }
-    .body-right-side {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        gap: 40px;
-        margin-left: 10px;
-    }
-    
-}
-
-
-/* Responsive Fixes for Small Screens */
-@media (max-width: 400px) {
-    /* Adjust header */
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-left {
-        margin-left: 10px; /* Reduce left margin */
-        margin-bottom: 10px;
-    }
-
-    .header-right {
-        font-size: 15px;
-        gap: 10px;
-        margin-right: 10px;
-    }
-
-    /* Fix "Get in Touch" button */
-    .get-in-touch {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 20px;
-        width: 150px; /* Adjust width to fit exactly two lines */
-        text-align: center; /* Center align text */
-        padding: 10px;
-        line-height: 1.2; /* Control line height to prevent extra wrapping */
-    }
-
-    /* Contact details container */
-    .contact-details-container {
-        flex-direction: column;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 15px;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .contact-details-header {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .contact-details-text,
-    .contact-details-text-content1 {
-        font-size: 15px;
-        margin: 20px;
-        text-align: justify;
-    }
-    .contact-details-text1 {
-        font-size: 15px;
-        justify-content: left;
-        margin-left: 20px;
-    }
-
-    /* Adjust popup */
-    .popup {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .popup h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .popup input,
-    .popup textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-    .close-button {
-        font-size: 14px;
-    }
-
-    .submit-button {
-        font-size: 14px;
-        padding: 10px;
-        width: 100%;
-    }
-
-    /* Fix body layout */
-    .body {
-        flex-direction: column;
-    }
-
-    .body-left-side {
-        width: 100%;
-        margin: 0;
-    }
-    .body-right-side {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 0 20px;
         gap: 20px;
+        font-size: 16px;
+    }
+    .projects {
+        font-size: 35px;
+    }
+    .project-body {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .project-left,
+    .project-middle,
+    .project-right {
+        width: 100%;
+    }
+    .project-details {
+        font-size: 22px;
+    }
+    .project-name {
+        font-size: 16px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
         margin-left: 10px;
     }
-    .contact-body {
-        padding: 0px;
+    .contact-me {
+        font-size: 25px;
+        width: auto;
     }
-    .contact-details-content {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-}
-.popup-overlay1 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    backdrop-filter: blur(10px);         /* ✅ Apply blur */
-    background-color: rgba(0, 0, 0, 0.3); /* Optional: darken it */
-}
-
-.popup-content {
-    font-family: Tahoma;
-    font-size: 20px;
-    background: white;
-    border-right: 5px solid red;
-    width: 500px;
-    padding: 20px 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(48, 47, 47, 0.4);
-    /* Animated border glow */
-    animation: fadeInBounce 1.2s ease-out, borderPulse 2.5s infinite ease-in-out;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-/* Fade in with bounce */
-@keyframes fadeInBounce {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px) scale(0.95);
-    }
-    60% {
-        opacity: 1;
-        transform: translateY(10px) scale(1.02);
-    }
-    100% {
-        transform: translateY(0) scale(1);
+    .contact-details-text2 {
+        font-size: 18px;
+        margin: 10px;
+        line-height: 1.4;
     }
 }
 
-/* Pulsing border effect */
-@keyframes borderPulse {
-    0% {
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+/* Small Phone (400px and below) */
+@media (max-width: 400px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
-    50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    .header-left {
+        margin-left: 10px;
+        margin-bottom: 10px;
     }
-    100% {
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+    .header-right {
+        margin: 0 10px;
+        gap: 15px;
+        font-size: 14px;
+    }
+    .projects {
+        font-size: 30px;
+    }
+    .project-body {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        margin: 5px;
+    }
+    .project-left,
+    .project-middle,
+    .project-right {
+        width: 100%;
+    }
+    .project-details {
+        font-size: 20px;
+    }
+    .project-name {
+        font-size: 14px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+    .contact-me {
+        font-size: 22px;
+        width: auto;
+    }
+    .contact-details-text2 {
+        font-size: 16px;
+        margin: 8px;
+        line-height: 1.4;
     }
 }
-.popup-content button {
-    font-family: Tahoma;
-    font-size: 20px;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-h2 {
-    color: #222;
-    font-size: 28px;
-    text-shadow: 1px 1px 2px #aaa;
-  }

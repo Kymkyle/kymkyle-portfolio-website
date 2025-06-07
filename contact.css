@@ -482,7 +482,7 @@ a:hover .bi.bi-skype {
     /* Adjust header */
     .header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
 
     .header-left {
